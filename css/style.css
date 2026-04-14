@@ -252,6 +252,51 @@ p { font-size: 1.15rem; line-height: 1.7; word-break: keep-all; color: inherit; 
 .submit-btn:hover { background-color: #e65c00; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 107, 0, 0.4); }
 
 /* =========================================
+   티메이트, 모빌리티비 배경 슬라이더 애니메이션
+   ========================================= */
+.slider-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    height: 100%;
+    /* slider-track 계산식 : width = 총 이미지 갯수(원본+첫번쨰 복제1개) x 100% */
+    width: 400%; 
+    /* 애니메이션 시간 = 이미지 1장 당 4초 계산*/
+    animation: slide-step 12s infinite ease-in-out;
+}
+
+.slider-item {
+    /* slider-item 계산식 : width = 100% ÷ 총 이미지 갯수(원본+첫번째 복제 1개)  */
+    width: 25%; 
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* 이미지 위에 어두운 오버레이 */
+.slider-item::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+}
+
+/*이동거리(translateX) = 100% ÷ 총 이미지 갯수(원본+첫번째 복제 1개)% 씩 이동 
+애니메이션 시간 ( transform 앞의 퍼센트) = 100 ÷ 원본 이미지 갯수에서 이동시간 차감 (적당히 3~4%정도 나누기) */
+@keyframes slide-step {
+    0%, 28% { transform: translateX(0%); }      /* 1번 이미지 대기 */
+    33%, 61% { transform: translateX(-25%); }   /* 2번 이미지로 이동 후 대기 */
+    66%, 94% { transform: translateX(-50%); }   /* 3번 이미지로 이동 후 대기 */
+    100% { transform: translateX(-75%); }       /* 1번 복제본으로 이동하여 반복 */
+}
+
+/* =========================================
    5. 푸터 (Footer)
    ========================================= */
 .site-footer { width: 100%; background-color: #1a1a1a; color: #aaa; text-align: center; padding: 40px 20px 30px; font-size: 0.9rem; line-height: 1.6; z-index: 10; }

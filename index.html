@@ -135,8 +135,20 @@
                     <a href="teemate.html" class="cta-btn">Teemate 알아보기</a>
                 </div>
             </div>
-            <div class="media-area" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./images/bg-teemate.gif');">
-                <div class="reveal" style="width: 100%; height: 100%;"></div>
+            <!-- 배경 이미지 슬라이더(카드식, 티메이트) -->
+            <div class="media-area" style="padding: 0;">
+                <div class="slider-container">
+                    <div class="slider-track">
+                        <!-- 원본 (희망 시 더 추가하고, CSS에서 slider track , slider item, @keyframes 계산식에 맞춰서 수정하기.) -->
+                        <div class="slider-item" style="background-image: url('https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?q=80&w=800&auto=format&fit=crop');"></div>
+                        <div class="slider-item" style="background-image: url('https://images.unsplash.com/photo-1535136125430-81977755ae63?q=80&w=800&auto=format&fit=crop');"></div>
+                        <div class="slider-item" style="background-image: url('https://images.unsplash.com/photo-1593118247619-e2d6f056869e?q=80&w=800&auto=format&fit=crop');"></div>
+                        <!-- 첫 번째 이미지 복제본. 무조건 첫 이미지! -->
+                        <div class="slider-item" style="background-image: url('https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?q=80&w=800&auto=format&fit=crop');"></div>
+                    </div>
+                </div>
+                <!-- 스크롤 시 등장 애니메이션용 빈 태그 -->
+                <div class="reveal" style="position: absolute; inset: 0; pointer-events: none;"></div>
             </div>
         </section>
 
@@ -154,8 +166,20 @@
                     <a href="mobility-b.html" class="cta-btn" style="background-color: var(--white); color: var(--deep-blue);">MobilityB 알아보기</a>
                 </div>
             </div>
-            <div class="media-area" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./images/bg-mobility.gif');">
-                <div class="reveal" style="width: 100%; height: 100%;"></div>
+            <!-- 배경 이미지 슬라이더(카드식, 모빌리티비) -->
+            <div class="media-area" style="padding: 0;">
+                <div class="slider-container">
+                    <div class="slider-track">
+                        <!-- 원본 (희망 시 더 추가하고, CSS에서 slider track , slider item, @keyframes 계산식에 맞춰서 수정하기.) -->
+                        <div class="slider-item" style="background-image: url('https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?q=80&w=800&auto=format&fit=crop');"></div>
+                        <div class="slider-item" style="background-image: url('https://images.unsplash.com/photo-1535136125430-81977755ae63?q=80&w=800&auto=format&fit=crop');"></div>
+                        <div class="slider-item" style="background-image: url('https://images.unsplash.com/photo-1593118247619-e2d6f056869e?q=80&w=800&auto=format&fit=crop');"></div>
+                        <!-- 첫 번째 이미지 복제본. 무조건 첫 이미지! -->
+                        <div class="slider-item" style="background-image: url('https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?q=80&w=800&auto=format&fit=crop');"></div>
+                    </div>
+                </div>
+                <!-- 스크롤 시 등장 애니메이션용 빈 태그 -->
+                <div class="reveal" style="position: absolute; inset: 0; pointer-events: none;"></div>
             </div>
         </section>
 
@@ -243,7 +267,7 @@
             <span class="close-btn" onclick="closeOrgPopup()">&times;</span>
             <h3 style="font-size: 2rem; color: var(--deep-blue); margin-bottom: 20px; font-weight: 800;">Organization</h3>
             <div class="org-chart-box">
-                <img src="./images/org-chart.png" alt="라텔컴퍼니 조직도" style="width: 100%; border-radius: 10px; border: 1px solid #eee;">
+                <img src="./images/org-chart.JPG" alt="라텔컴퍼니 조직도" style="width: 100%; border-radius: 10px; border: 1px solid #eee;">
             </div>
             <p style="margin-top: 15px; color: #666;">신속하고 유연한 의사결정을 위한 라텔컴퍼니만의 수평적이고 전문적인 조직 체계</p>
         </div>
@@ -308,7 +332,7 @@
 		
     </script>
     <!-- EmailJS SDK 로드 -->
-    <script type="text/javascript" src="[https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js](https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js)"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
             // emailjs Public Key
